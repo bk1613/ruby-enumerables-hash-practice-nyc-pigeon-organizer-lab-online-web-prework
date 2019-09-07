@@ -24,12 +24,19 @@ def nyc_pigeon_organizer(data)
   data.each do |attri, hash_attr|
     hash_attr.each do |key, array|
       array.each do |name|
+<<<<<<< HEAD
         if hash_data.include?(name) == false
           hash_data[name] = {}
         end
         if hash_data[name].has_key?(attri) == false
            hash_data[name][attri] = []
         end
+=======
+        if hash_data.include?(name) == false or hash_data[name].has_key?(attri) == false
+          hash_data[name][attri] = []
+        end
+        
+>>>>>>> ad1afe626c18c110e6103ec3d3c1b5f2ba3cda24
         if hash_data.include?(key) == false
           hash_data[name][attri].push(key.to_s)
         end
